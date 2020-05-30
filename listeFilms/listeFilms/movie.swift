@@ -9,12 +9,29 @@ import Foundation
 
 struct Movie: Decodable, Identifiable {
     public var id: Int
-    public var name: String
-    public var released: String
+    public var nom: String
+    public var idL: String
+    public var note: Int
+    public var isShow: Bool
     
     enum CodingKeys: String, CodingKey {
            case id = "id"
-           case name = "title"
-           case released = "year"
+           case nom = "nom"
+           case idL = "idL"
+           case note = "note"
+           case isShow = "isShow"
         }
 }
+
+
+
+//
+//struct Movie: Decodable, Identifiable {
+//    public var nom: String
+//    public var id: String
+//
+//    enum CodingKeys: String, CodingKey {
+//            case nom = "nom"
+//            case id = "id"
+//        }
+//}

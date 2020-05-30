@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../listeFilms/menu.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../listeFilms/SearchBar.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../SwiftUIView.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../SearchBar.swift">
+   </FileRef>
+   <FileRef
       location = "group:../listeFilms/movies.json">
    </FileRef>
    <FileRef
