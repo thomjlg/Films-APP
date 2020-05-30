@@ -9,26 +9,27 @@ import SwiftUI
 
 struct menu: View {
     @EnvironmentObject var userData: UserData
-    @ObservedObject var fetcher = MovieFetcher()
-    
+
     var body: some View {
-        
+
         NavigationView {
             VStack {
                 HStack{
-                    Text("on my SSD")
+                    Text("sur mon disque dur")
                         .foregroundColor(Color.green)
                         .padding(.leading, nil)
-                    
+
                     Spacer()
                 }
-                List(fetcher.movies) { movie in
-                VStack (alignment: .leading) {
-                    NavigationLink(destination: ContentView()) {
-                        Text(movie.nom)
+                if self.userData.movies.count > 0 {
+                    List(0..<self.userData.movies.count, id: \.self) { movieIndex in
+                        VStack (alignment: .leading) {
+                            NavigationLink(destination: ContentView(movie: self.$userData.movies[movieIndex])) {
+                                Text(self.userData.movies[movieIndex].nom)
+                            }
+
+                        }.navigationBarTitle(Text("Liste des Films"))
                     }
-                            
-                    }.navigationBarTitle(Text("Films"))
                 }
             }
         }

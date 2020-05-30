@@ -10,8 +10,19 @@
 import SwiftUI
 import Combine
 
+
 final class UserData: ObservableObject  {
-    @Published var isShow: Bool = false
-    @Published var note: Double = 0
+
+    var fetcher = MovieFetcher()
+
     @Published var movies = [Movie]()
+
+    init() {
+        fetcher.load { (movies) in
+            if let movies = movies {
+                self.movies = movies
+            }
+        }
+    }
+
 }

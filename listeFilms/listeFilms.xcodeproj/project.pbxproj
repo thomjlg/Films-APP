@@ -36,6 +36,20 @@
 			remoteGlobalIDString = 4503C4FC247AD93600951396;
 			remoteInfo = listeFilms;
 		};
+		4564D7A92482BA100047931F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4503C4F5247AD93600951396 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4564D7932482BA0D0047931F;
+			remoteInfo = "listeFilms-MAC";
+		};
+		4564D7B42482BA100047931F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4503C4F5247AD93600951396 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4564D7932482BA0D0047931F;
+			remoteInfo = "listeFilms-MAC";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +70,10 @@
 		4503C536247AE75100951396 /* movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movie.swift; sourceTree = "<group>"; };
 		4503C538247AE76D00951396 /* fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetcher.swift; sourceTree = "<group>"; };
 		4564D78E24819DE60047931F /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		4564D7942482BA0D0047931F /* listeFilms-MAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "listeFilms-MAC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4564D7A82482BA100047931F /* listeFilms-MACTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "listeFilms-MACTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4564D7B32482BA100047931F /* listeFilms-MACUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "listeFilms-MACUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4564D7C32482BA480047931F /* Liste des FIlms.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Liste des FIlms.entitlements"; sourceTree = "<group>"; };
 		45C1EF45247C3F55008C8394 /* menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +99,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4564D7912482BA0D0047931F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4564D7A52482BA100047931F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4564D7B02482BA100047931F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -100,6 +139,9 @@
 				4503C4FD247AD93600951396 /* Liste des FIlms.app */,
 				4503C513247AD93800951396 /* listeFilmsTests.xctest */,
 				4503C51E247AD93800951396 /* listeFilmsUITests.xctest */,
+				4564D7942482BA0D0047931F /* listeFilms-MAC.app */,
+				4564D7A82482BA100047931F /* listeFilms-MACTests.xctest */,
+				4564D7B32482BA100047931F /* listeFilms-MACUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,6 +149,7 @@
 		4503C4FF247AD93600951396 /* listeFilms */ = {
 			isa = PBXGroup;
 			children = (
+				4564D7C32482BA480047931F /* Liste des FIlms.entitlements */,
 				45C1EF45247C3F55008C8394 /* menu.swift */,
 				4503C500247AD93600951396 /* AppDelegate.swift */,
 				4503C502247AD93600951396 /* SceneDelegate.swift */,
@@ -204,13 +247,66 @@
 			productReference = 4503C51E247AD93800951396 /* listeFilmsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		4564D7932482BA0D0047931F /* listeFilms-MAC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4564D7C02482BA100047931F /* Build configuration list for PBXNativeTarget "listeFilms-MAC" */;
+			buildPhases = (
+				4564D7902482BA0D0047931F /* Sources */,
+				4564D7912482BA0D0047931F /* Frameworks */,
+				4564D7922482BA0D0047931F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "listeFilms-MAC";
+			productName = "listeFilms-MAC";
+			productReference = 4564D7942482BA0D0047931F /* listeFilms-MAC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4564D7A72482BA100047931F /* listeFilms-MACTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4564D7C12482BA100047931F /* Build configuration list for PBXNativeTarget "listeFilms-MACTests" */;
+			buildPhases = (
+				4564D7A42482BA100047931F /* Sources */,
+				4564D7A52482BA100047931F /* Frameworks */,
+				4564D7A62482BA100047931F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4564D7AA2482BA100047931F /* PBXTargetDependency */,
+			);
+			name = "listeFilms-MACTests";
+			productName = "listeFilms-MACTests";
+			productReference = 4564D7A82482BA100047931F /* listeFilms-MACTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4564D7B22482BA100047931F /* listeFilms-MACUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4564D7C22482BA100047931F /* Build configuration list for PBXNativeTarget "listeFilms-MACUITests" */;
+			buildPhases = (
+				4564D7AF2482BA100047931F /* Sources */,
+				4564D7B02482BA100047931F /* Frameworks */,
+				4564D7B12482BA100047931F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4564D7B52482BA100047931F /* PBXTargetDependency */,
+			);
+			name = "listeFilms-MACUITests";
+			productName = "listeFilms-MACUITests";
+			productReference = 4564D7B32482BA100047931F /* listeFilms-MACUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		4503C4F5247AD93600951396 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1140;
+				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Thomas JAULGEY";
 				TargetAttributes = {
@@ -224,6 +320,17 @@
 					4503C51D247AD93800951396 = {
 						CreatedOnToolsVersion = 11.4.1;
 						TestTargetID = 4503C4FC247AD93600951396;
+					};
+					4564D7932482BA0D0047931F = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					4564D7A72482BA100047931F = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 4564D7932482BA0D0047931F;
+					};
+					4564D7B22482BA100047931F = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 4564D7932482BA0D0047931F;
 					};
 				};
 			};
@@ -243,6 +350,9 @@
 				4503C4FC247AD93600951396 /* listeFilms */,
 				4503C512247AD93800951396 /* listeFilmsTests */,
 				4503C51D247AD93800951396 /* listeFilmsUITests */,
+				4564D7932482BA0D0047931F /* listeFilms-MAC */,
+				4564D7A72482BA100047931F /* listeFilms-MACTests */,
+				4564D7B22482BA100047931F /* listeFilms-MACUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -266,6 +376,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4503C51C247AD93800951396 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4564D7922482BA0D0047931F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4564D7A62482BA100047931F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4564D7B12482BA100047931F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -305,6 +436,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4564D7902482BA0D0047931F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4564D7A42482BA100047931F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4564D7AF2482BA100047931F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -317,6 +469,16 @@
 			isa = PBXTargetDependency;
 			target = 4503C4FC247AD93600951396 /* listeFilms */;
 			targetProxy = 4503C51F247AD93800951396 /* PBXContainerItemProxy */;
+		};
+		4564D7AA2482BA100047931F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4564D7932482BA0D0047931F /* listeFilms-MAC */;
+			targetProxy = 4564D7A92482BA100047931F /* PBXContainerItemProxy */;
+		};
+		4564D7B52482BA100047931F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4564D7932482BA0D0047931F /* listeFilms-MAC */;
+			targetProxy = 4564D7B42482BA100047931F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -450,6 +612,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "listeFilms/Liste des FIlms.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"listeFilms/Preview Content\"";
@@ -460,9 +623,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = thomasjaulgey.listeFilms;
 				PRODUCT_NAME = "Liste des FIlms";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -472,6 +637,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "listeFilms/Liste des FIlms.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"listeFilms/Preview Content\"";
@@ -482,9 +648,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = thomasjaulgey.listeFilms;
 				PRODUCT_NAME = "Liste des FIlms";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -570,6 +738,140 @@
 			};
 			name = Release;
 		};
+		4564D7BA2482BA100047931F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "listeFilms-MAC/listeFilms_MAC.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"listeFilms-MAC/Preview Content\"";
+				DEVELOPMENT_TEAM = Y96MD9X5Y2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "listeFilms-MAC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "thomasjaulgey.listeFilms-MAC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4564D7BB2482BA100047931F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "listeFilms-MAC/listeFilms_MAC.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"listeFilms-MAC/Preview Content\"";
+				DEVELOPMENT_TEAM = Y96MD9X5Y2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "listeFilms-MAC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "thomasjaulgey.listeFilms-MAC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		4564D7BC2482BA100047931F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Y96MD9X5Y2;
+				INFOPLIST_FILE = "listeFilms-MACTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "thomasjaulgey.listeFilms-MACTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/listeFilms-MAC.app/Contents/MacOS/listeFilms-MAC";
+			};
+			name = Debug;
+		};
+		4564D7BD2482BA100047931F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Y96MD9X5Y2;
+				INFOPLIST_FILE = "listeFilms-MACTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "thomasjaulgey.listeFilms-MACTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/listeFilms-MAC.app/Contents/MacOS/listeFilms-MAC";
+			};
+			name = Release;
+		};
+		4564D7BE2482BA100047931F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Y96MD9X5Y2;
+				INFOPLIST_FILE = "listeFilms-MACUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "thomasjaulgey.listeFilms-MACUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "listeFilms-MAC";
+			};
+			name = Debug;
+		};
+		4564D7BF2482BA100047931F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Y96MD9X5Y2;
+				INFOPLIST_FILE = "listeFilms-MACUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "thomasjaulgey.listeFilms-MACUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "listeFilms-MAC";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -605,6 +907,33 @@
 			buildConfigurations = (
 				4503C52E247AD93800951396 /* Debug */,
 				4503C52F247AD93800951396 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4564D7C02482BA100047931F /* Build configuration list for PBXNativeTarget "listeFilms-MAC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4564D7BA2482BA100047931F /* Debug */,
+				4564D7BB2482BA100047931F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4564D7C12482BA100047931F /* Build configuration list for PBXNativeTarget "listeFilms-MACTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4564D7BC2482BA100047931F /* Debug */,
+				4564D7BD2482BA100047931F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4564D7C22482BA100047931F /* Build configuration list for PBXNativeTarget "listeFilms-MACUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4564D7BE2482BA100047931F /* Debug */,
+				4564D7BF2482BA100047931F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

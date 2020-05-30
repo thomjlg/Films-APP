@@ -6,8 +6,43 @@
 	<dict>
 		<key>listeFilms.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>4503C4FC247AD93600951396</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4503C512247AD93800951396</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4503C51D247AD93800951396</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4564D7932482BA0D0047931F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4564D7A72482BA100047931F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4564D7B22482BA100047931F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

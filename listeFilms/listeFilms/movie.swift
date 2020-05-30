@@ -7,13 +7,13 @@
 //
 import Foundation
 
-struct Movie: Decodable, Identifiable {
+struct Movie: Decodable, Encodable, Identifiable {
     public var id: Int
     public var nom: String
     public var idL: String
     public var note: Int
     public var isShow: Bool
-    
+
     enum CodingKeys: String, CodingKey {
            case id = "id"
            case nom = "nom"
