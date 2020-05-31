@@ -44,7 +44,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(movie: .constant(Movie(id: 1, nom: "A", idL: "B", note: 2, isShow: true)), note: 3)
         .environmentObject(MovieFetcher())
     }
 }
