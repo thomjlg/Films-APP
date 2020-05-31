@@ -57,6 +57,7 @@
 		4503C538247AE76D00951396 /* fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetcher.swift; sourceTree = "<group>"; };
 		4564D78E24819DE60047931F /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		45C1EF45247C3F55008C8394 /* menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menu.swift; sourceTree = "<group>"; };
+		45E9C5D92483A1B5002B527A /* Liste des FIlms.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Liste des FIlms.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +108,7 @@
 		4503C4FF247AD93600951396 /* listeFilms */ = {
 			isa = PBXGroup;
 			children = (
+				45E9C5D92483A1B5002B527A /* Liste des FIlms.entitlements */,
 				45C1EF45247C3F55008C8394 /* menu.swift */,
 				4503C500247AD93600951396 /* AppDelegate.swift */,
 				4503C502247AD93600951396 /* SceneDelegate.swift */,
@@ -450,6 +452,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "listeFilms/Liste des FIlms.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"listeFilms/Preview Content\"";
@@ -463,6 +466,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = thomasjaulgey.listeFilms;
 				PRODUCT_NAME = "Liste des FIlms";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -472,6 +476,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "listeFilms/Liste des FIlms.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"listeFilms/Preview Content\"";
@@ -485,6 +490,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = thomasjaulgey.listeFilms;
 				PRODUCT_NAME = "Liste des FIlms";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

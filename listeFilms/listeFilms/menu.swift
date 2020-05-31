@@ -9,28 +9,44 @@ import SwiftUI
 
 struct menu: View {
     @EnvironmentObject var userData: UserData
-    @ObservedObject var fetcher = MovieFetcher()
+    @State var showShowOnly = false
     
     var body: some View {
-        
         NavigationView {
             VStack {
                 HStack{
-                    Text("on my SSD")
-                        .foregroundColor(Color.green)
-                        .padding(.leading, nil)
-                    
-                    Spacer()
+                    Toggle("Uniquement les films non vu", isOn: self.$userData.movies.isShow)
+                        .padding(.horizontal, 20.0)
+                        .padding(.vertical, 10.0)
+                        .foregroundColor(Color(red:0.2, green:0.6, blue:0.8))
                 }
-                List(fetcher.movies) { movie in
-                VStack (alignment: .leading) {
-                    NavigationLink(destination: ContentView()) {
-                        Text(movie.nom)
+                if self.userData.movies.count > 0 {
+                    List(0..<self.userData.movies.count, id: \.self) { movieIndex in
+                        VStack (alignment: .leading) {
+                            NavigationLink(destination: ContentView(movie: self.$userData.movies[movieIndex])) {
+                                Text(self.userData.movies[movieIndex].nom)
+                            }
+
+                        }.navigationBarTitle(Text("Films"))
                     }
-                            
-                    }.navigationBarTitle(Text("Films"))
                 }
             }
+            HStack{
+                VStack{
+                    HStack{
+                        Text("Liste des films présents sur le disque dur")
+                        .font(.headline)
+                        Spacer()
+                    }
+                    HStack{
+                        Text("\nPossibilité de renseigner si un film a été vu.\nPossibilité de noter un film (sur 5).")
+                        .font(.subheadline)
+                        Spacer()
+                    }
+                }
+            Spacer()
+            }
+            .padding(.leading, 50.0)
         }
     }
 }

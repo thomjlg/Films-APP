@@ -9,32 +9,70 @@
 import Foundation
 
 public class MovieFetcher: ObservableObject {
-    @Published var movies = [Movie]()
-    @Published var isShow: Bool = false
-    @Published var note: Double = 0
-    
-    init(){
-        load()
+
+    func save(movies: [Movie]) {
+
+        OperationQueue().addOperation {
+
+            do {
+                let encoded = try JSONEncoder().encode(movies)
+                let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+
+                do {
+                    try encoded.write(to: url[0].appendingPathComponent("movies"))
+                    print("saved to ", url[0])
+                } catch {
+                    print(error)
+                }
+
+            } catch {
+                print(error)
+            }
+        }
     }
-    
-    func load() {
-        let url = URL(string: "https://gist.githubusercontent.com/thomjlg/0782e9e8e27c346af3600bff9923f294/raw/514bf34829d8ce964bd1182430dacc8a6ff2fe66/films2.json")!
-    
+
+    func load(completion: @escaping (([Movie]?) -> () )) {
+
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+
+        do {
+            if let data = try? Data(contentsOf: urls[0].appendingPathComponent("movies")) {
+
+                let decodedLists = try JSONDecoder().decode([Movie].self, from: data as Data)
+                DispatchQueue.main.async {
+                    completion(decodedLists)
+                }
+
+
+            } else {
+                loadFromJson(completion: completion)
+            }
+        } catch {
+            print(error)
+            completion(nil)
+        }
+    }
+
+    func loadFromJson(completion: @escaping (([Movie]?) -> () )) {
+
+        let url = URL(string: "https://gist.githubusercontent.com/thomjlg/0782e9e8e27c346af3600bff9923f294/raw/9705fb0c6b40eae59578755b86e331bea257972b/films2.json")!
+
         URLSession.shared.dataTask(with: url) {(data,response,error) in
             do {
                 if let d = data {
                     let decodedLists = try JSONDecoder().decode([Movie].self, from: d)
                     DispatchQueue.main.async {
-                        self.movies = decodedLists
+                        completion(decodedLists)
                     }
                 }else {
                     print("No Data")
+                    completion(nil)
                 }
             } catch {
                 print ("Error")
+                completion(nil)
             }
-            
+
         }.resume()
-         
     }
 }
