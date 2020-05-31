@@ -17,6 +17,7 @@
 		4503C523247AD93800951396 /* listeFilmsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503C522247AD93800951396 /* listeFilmsUITests.swift */; };
 		4503C537247AE75100951396 /* movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503C536247AE75100951396 /* movie.swift */; };
 		4503C539247AE76D00951396 /* fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4503C538247AE76D00951396 /* fetcher.swift */; };
+		450EEA7424842BE7006C9EE6 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450EEA7324842BE7006C9EE6 /* SearchBar.swift */; };
 		4564D78F24819DE60047931F /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4564D78E24819DE60047931F /* UserData.swift */; };
 		45C1EF46247C3F55008C8394 /* menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C1EF45247C3F55008C8394 /* menu.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		4503C524247AD93800951396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4503C536247AE75100951396 /* movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movie.swift; sourceTree = "<group>"; };
 		4503C538247AE76D00951396 /* fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetcher.swift; sourceTree = "<group>"; };
+		450EEA7324842BE7006C9EE6 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		4564D78E24819DE60047931F /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		45C1EF45247C3F55008C8394 /* menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menu.swift; sourceTree = "<group>"; };
 		45E9C5D92483A1B5002B527A /* Liste des FIlms.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Liste des FIlms.entitlements"; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				45E9C5D92483A1B5002B527A /* Liste des FIlms.entitlements */,
 				45C1EF45247C3F55008C8394 /* menu.swift */,
+				450EEA7324842BE7006C9EE6 /* SearchBar.swift */,
 				4503C500247AD93600951396 /* AppDelegate.swift */,
 				4503C502247AD93600951396 /* SceneDelegate.swift */,
 				4503C504247AD93600951396 /* ContentView.swift */,
@@ -286,6 +289,7 @@
 				4564D78F24819DE60047931F /* UserData.swift in Sources */,
 				4503C501247AD93600951396 /* AppDelegate.swift in Sources */,
 				4503C503247AD93600951396 /* SceneDelegate.swift in Sources */,
+				450EEA7424842BE7006C9EE6 /* SearchBar.swift in Sources */,
 				4503C505247AD93600951396 /* ContentView.swift in Sources */,
 				45C1EF46247C3F55008C8394 /* menu.swift in Sources */,
 			);
