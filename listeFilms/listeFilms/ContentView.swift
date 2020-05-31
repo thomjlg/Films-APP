@@ -19,13 +19,29 @@ struct ContentView: View {
     var body: some View {
         VStack{
             HStack{
-                Text("Film :")
-                    .font(.headline)
-                    .fontWeight(.bold)
-                Text(self.movie.nom)
+                Spacer()
+                VStack{
+                    Spacer()
+                        
+                        .padding(/*@START_MENU_TOKEN@*/.top, -30.0/*@END_MENU_TOKEN@*/)
+                        .frame(height: 5.0)
+                    Text("Film :")
+                        .font(.headline)
+                        .fontWeight(.bold)
+                    Spacer()
+                        .frame(height: 10.0)
+                    Text(self.movie.nom)
+                }
+                
+                Spacer()
+                
             }
-            .padding([.leading, .bottom, .trailing], 30.0)
-            .padding(/*@START_MENU_TOKEN@*/.top, -30.0/*@END_MENU_TOKEN@*/)
+            .padding([.leading, .trailing], 30.0)
+            .padding(.top, 10.0)
+            .padding(.bottom, 15.0)
+            .background(/*@START_MENU_TOKEN@*/Color(hue: 0.536, saturation: 0.764, brightness: 0.565)/*@END_MENU_TOKEN@*/)
+            .foregroundColor(.white)
+            
             
             Spacer()
                 .frame(height: 60.0)
@@ -50,13 +66,13 @@ struct ContentView: View {
             Spacer()
                 .frame(height: 50)
             VStack{
-                Slider(value: self.$note, in: 0...5, step: 1) { (changed) in
+                Slider(value: self.$note, in: 0...10, step: 1) { (changed) in
                     self.movie.note = Int(self.note)
                     self.userData.fetcher.save(movies: self.userData.movies)
                 }
                 .padding(.horizontal, 70.0)
 
-                Text("Note de \(Int(self.movie.note)) / 5")
+                Text("Note de \(Int(self.movie.note)) / 10")
             }
                 .overlay(
                         RoundedRectangle(cornerRadius: 15)

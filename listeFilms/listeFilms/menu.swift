@@ -14,21 +14,23 @@ struct menu: View {
     var body: some View {
         NavigationView {
             VStack {
-                HStack{
-                    Toggle("Uniquement les films non vu", isOn: self.$userData.movies.isShow)
-                        .padding(.horizontal, 20.0)
-                        .padding(.vertical, 10.0)
-                        .foregroundColor(Color(red:0.2, green:0.6, blue:0.8))
-                }
+                
                 if self.userData.movies.count > 0 {
-                    List(0..<self.userData.movies.count, id: \.self) { movieIndex in
+                    List{
+                        HStack{
+                            Toggle("Uniquement les films non vu", isOn: self.$showShowOnly)
+//                                .padding(.horizontal, 20.0)
+                                .padding(.vertical, 10.0)
+                                .foregroundColor(Color(red:0.2, green:0.6, blue:0.8))
+                        }
+                        ForEach(0..<self.userData.movies.count, id: \.self) { movieIndex in
                         VStack (alignment: .leading) {
                             NavigationLink(destination: ContentView(movie: self.$userData.movies[movieIndex])) {
                                 Text(self.userData.movies[movieIndex].nom)
                             }
 
-                        }.navigationBarTitle(Text("Films"))
-                    }
+                            }}
+                    }.navigationBarTitle(Text("Films"))
                 }
             }
             HStack{
@@ -38,9 +40,12 @@ struct menu: View {
                         .font(.headline)
                         Spacer()
                     }
-                    HStack{
-                        Text("\nPossibilité de renseigner si un film a été vu.\nPossibilité de noter un film (sur 5).")
-                        .font(.subheadline)
+                    VStack{
+                        HStack{
+                            Text("\nPossibilité de renseigner si un film a été vu.\nPossibilité de noter un film (sur 10).")
+                            .font(.subheadline)
+                            Spacer()
+                        }
                         Spacer()
                     }
                 }
