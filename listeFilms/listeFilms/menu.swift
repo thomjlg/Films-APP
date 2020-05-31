@@ -10,18 +10,17 @@ import SwiftUI
 struct menu: View {
     @EnvironmentObject var userData: UserData
     @State var showShowOnly = false
-    @State private var searchText : String = ""
+    @State private var searchText = ""
     
     var body: some View {
         NavigationView {
             VStack {
                 
                 if self.userData.movies.count > 0 {
-                    List(self.userData.movies.nom.filter {
-                        self.searchText.isEmpty ? true : $0.lowercased().contains(self.searchText.lowercased())
-                    }, id: \.self) {
+                    List(userData.movies.name.filter({ searchText.isEmpty ? true : $0.name.contains(searchText) })){
                         HStack{
                             Toggle("Uniquement les films non vu", isOn: self.$showShowOnly)
+//                                .padding(.horizontal, 20.0)
                                 .padding(.vertical, 10.0)
                                 .foregroundColor(Color(red:0.2, green:0.6, blue:0.8))
                         }
