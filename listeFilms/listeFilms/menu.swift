@@ -24,10 +24,6 @@ struct menu: View {
                                 .padding(.vertical, 10.0)
                                 .foregroundColor(Color(red:0.2, green:0.6, blue:0.8))
                         }
-                       
-                        ForEach(self.userData.movies.filter { userData.isOn ? true : $0.showShowOnly }) { item in
-                            self.userData.movies[item].nom
-                        }
                         
                         ForEach(0..<self.userData.movies.count, id: \.self) { movieIndex in
                         VStack (alignment: .leading) {
