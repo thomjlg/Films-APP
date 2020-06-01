@@ -17,15 +17,17 @@ struct menu: View {
             VStack {
                 
                 if self.userData.movies.count > 0 {
-                    List(userData.movies.name.filter({ searchText.isEmpty ? true : $0.name.contains(searchText) })){
+                    List{
                         HStack{
                             Toggle("Uniquement les films non vu", isOn: self.$showShowOnly)
 //                                .padding(.horizontal, 20.0)
                                 .padding(.vertical, 10.0)
                                 .foregroundColor(Color(red:0.2, green:0.6, blue:0.8))
                         }
-                        SearchBar(text: $searchText)
-                        
+                       
+                        ForEach(self.userData.movies.filter { userData.isOn ? true : $0.showShowOnly }) { item in
+                            self.userData.movies[item].nom
+                        }
                         
                         ForEach(0..<self.userData.movies.count, id: \.self) { movieIndex in
                         VStack (alignment: .leading) {
