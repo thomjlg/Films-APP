@@ -25,7 +25,7 @@ struct menu: View {
                                 .foregroundColor(Color(red:0.2, green:0.6, blue:0.8))
                         }
                         
-                        ForEach(0..<self.userData.movies.filter{ self.showShowOnly == true ?  $0.isShow == self.showShowOnly  : true }.count, id: \.self) { movieIndex in
+                        ForEach(0..<self.userData.movies.filter{ self.showShowOnly ? $0.isShow == !self.showShowOnly : true }.count, id: \.self) { movieIndex in
                             VStack (alignment: .leading) {
                                 NavigationLink(destination: ContentView(movie: self.$userData.movies[movieIndex])) {
                                     Text(self.userData.movies[movieIndex].nom)

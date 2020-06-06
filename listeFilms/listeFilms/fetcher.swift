@@ -9,7 +9,6 @@
 import Foundation
 
 public class MovieFetcher: ObservableObject {
-
     func save(movies: [Movie]) {
 
         OperationQueue().addOperation {
