@@ -54,7 +54,7 @@ public class MovieFetcher: ObservableObject {
 
     func loadFromJson(completion: @escaping (([Movie]?) -> () )) {
 
-        let url = URL(string: "https://gist.githubusercontent.com/thomjlg/0782e9e8e27c346af3600bff9923f294/raw/9705fb0c6b40eae59578755b86e331bea257972b/films2.json")!
+        let url = URL(string: "https://gist.githubusercontent.com/thomjlg/0782e9e8e27c346af3600bff9923f294/raw/e0e8fc74e9ad549f21b0fb59836dc29ddfb611a2/films2.json")!
 
         URLSession.shared.dataTask(with: url) {(data,response,error) in
             do {

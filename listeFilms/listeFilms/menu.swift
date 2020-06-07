@@ -11,6 +11,7 @@ struct menu: View {
     @EnvironmentObject var userData: UserData
     @State var showShowOnly = false
     @State private var searchText = ""
+//    @ObservedObject var movie: Movie
     
     var body: some View {
         NavigationView {
@@ -25,13 +26,23 @@ struct menu: View {
                                 .foregroundColor(Color(red:0.2, green:0.6, blue:0.8))
                         }
                         
-                        ForEach(0..<self.userData.movies.filter{ self.showShowOnly ? $0.isShow == !self.showShowOnly : true }.count, id: \.self) { movieIndex in
+//                        ForEach(0..<self.userData.movies.filter{ self.showShowOnly ? $0.isShow == !self.showShowOnly : true }.count, id: \.self) { movieIndex in
+//                            VStack (alignment: .leading) {
+//                                NavigationLink(destination: ContentView(movie: self.$userData.movies[movieIndex])) {
+//                                    Text(self.userData.movies[movieIndex].nom)
+//                                }
+//
+//                            }}
+                        
+                        ForEach(self.userData.movies.filter{ self.showShowOnly ? $0.isShow == !self.showShowOnly : true }) { movie in
                             VStack (alignment: .leading) {
-                                NavigationLink(destination: ContentView(movie: self.$userData.movies[movieIndex])) {
-                                    Text(self.userData.movies[movieIndex].nom)
+                                NavigationLink(destination: ContentView(movie: movie)) {
+                                    Text(movie.nom)
                                 }
-                                
-                            }}
+                            }
+                        }
+                        
+                        
                     }.navigationBarTitle(Text("Films"))
                 }
             }

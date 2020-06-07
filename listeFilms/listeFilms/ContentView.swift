@@ -12,7 +12,7 @@ struct ContentView: View {
 
     @EnvironmentObject var userData: UserData
 
-    @Binding var movie : Movie
+    @ObservedObject var movie: Movie
 
     @State var note: Double = 0
 
@@ -93,7 +93,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(movie: .constant(Movie(id: 1, nom: "A", idL: "B", note: 2, isShow: true)), note: 3)
+        ContentView(movie: Movie(id: 1, nom: "A", idL: "B", note: 2, isShow: true), note: 3)
         .environmentObject(MovieFetcher())
     }
 }
