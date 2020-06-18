@@ -7,11 +7,37 @@
 
 import SwiftUI
 
+extension Binding where Value == Bool {
+    public func negate() -> Binding<Bool> {
+        return Binding<Bool>(get:{ !self.wrappedValue },
+            set: { self.wrappedValue = !$0})
+    }
+}
+
 struct menu: View {
     @EnvironmentObject var userData: UserData
     @State var showShowOnly = false
     @State private var searchText = ""
-//    @ObservedObject var movie: Movie
+    @State var showfilters = false
+    
+    
+    
+    var Filters: some View {
+        VStack{
+            
+            Toggle("Uniquement les films non vu", isOn: self.$showShowOnly)
+            .padding(.horizontal, 20.0)
+            .padding(.vertical, 10.0)
+            .foregroundColor(Color(red:0.2, green:0.6, blue:0.8))
+            
+            Toggle("Uniquement les films vu", isOn: self.$showShowOnly.negate())
+            .padding(.horizontal, 20.0)
+            .padding(.vertical, 10.0)
+            .foregroundColor(Color(red:0.2, green:0.6, blue:0.8))
+            
+        }
+    }
+    
     
     var body: some View {
         NavigationView {
@@ -20,10 +46,14 @@ struct menu: View {
                 if self.userData.movies.count > 0 {
                     List{
                         HStack{
-                            Toggle("Uniquement les films non vu", isOn: self.$showShowOnly)
-                                .padding(.horizontal, 20.0)
-                                .padding(.vertical, 10.0)
-                                .foregroundColor(Color(red:0.2, green:0.6, blue:0.8))
+                            Button(action: {self.showfilters.toggle()}) {
+                                Text("Filtres")
+                                    .foregroundColor(.red)
+                                    .fontWeight(.bold)
+                            }.sheet(isPresented: $showfilters) {
+                                self.Filters
+                            }
+                            
                         }
                         
 //                        ForEach(0..<self.userData.movies.filter{ self.showShowOnly ? $0.isShow == !self.showShowOnly : true }.count, id: \.self) { movieIndex in
